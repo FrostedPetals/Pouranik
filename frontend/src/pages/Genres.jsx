@@ -94,29 +94,35 @@ export default function Genres() {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <section className="page-hero section-spacing-small">
+      {/*<section className="page-hero section-spacing-small">*/}
+      <section 
+  className="page-hero section-spacing-small" 
+  style={{ minHeight: '50vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
+> {/*fixed alignment to the center*/}
+
+
         <div className="container-modern text-center">
           <h1 className="heading-primary mb-6 floating-animation" style={{ color: 'var(--primary-700)' }}>
             📑 Explore Genres
           </h1>
-          <p className="text-body-large max-w-3xl mx-auto mb-8" style={{ color: 'var(--text-secondary)' }}>
+          <p className="text-body-large max-w-3xl mx-auto mb-8 text-center justify-center" style={{ color: 'var(--text-secondary)' }}>
             Discover books by your favorite categories and explore new literary territories. 
             Each genre offers a unique journey into different worlds of knowledge and imagination.
           </p>
           
           {/* Stats */}
-          <div className="glass-effect card-small max-w-2xl mx-auto border-subtle">
-            <div className="grid grid-cols-3 gap-6 text-center">
+           < div className="glass-effect card-small max-w-1xl mx-auto border-subtle flex flex-col justify-center items-center px-6" style={{ minHeight: '100px' }}>
+            <div className="justify-center grid grid-cols-3 gap-8 place-items-center py-6 ">
               <div>
-                <div className="text-2xl font-bold" style={{ color: 'var(--primary-600)' }}>40M+</div>
+                <div className="text-2xl font-bold items-center" style={{ color: 'var(--primary-600)' }}>40M+</div>
                 <div className="text-small" style={{ color: 'var(--text-muted)' }}>Total Books</div>
               </div>
               <div>
-                <div className="text-2xl font-bold" style={{ color: 'var(--primary-600)' }}>12</div>
+                <div className="text-2xl font-bold items-center" style={{ color: 'var(--primary-600)' }}>12</div>
                 <div className="text-small" style={{ color: 'var(--text-muted)' }}>Popular Genres</div>
               </div>
               <div>
-                <div className="text-2xl font-bold" style={{ color: 'var(--primary-600)' }}>100+</div>
+                <div className="text-2xl font-bold items-center" style={{ color: 'var(--primary-600)' }}>100+</div>
                 <div className="text-small" style={{ color: 'var(--text-muted)' }}>Languages</div>
               </div>
             </div>
@@ -257,6 +263,7 @@ export default function Genres() {
                 key={combo}
                 to={`/explore?genre=${encodeURIComponent(combo)}`}
                 className="glass-effect p-4 rounded-2xl text-center book-card-hover border border-white border-opacity-20 no-underline block"
+                //style={{ maxHeight: '30px', overflow: 'hidden' }}
               >
                 <span className="text-white text-sm font-medium">{combo}</span>
               </Link>
